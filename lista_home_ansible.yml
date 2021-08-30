@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Lista archivs de home ansible
+    shell:
+      cmd: ls -la
+      chdir: /home/ansible
+  - name: Lista archivs de tmp
+    shell:
+      cmd: ls -la
+      chdir: /tmp
