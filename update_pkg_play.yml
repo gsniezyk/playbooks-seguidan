@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  ## Install (present) or renove (absent) all packages
+  - name: Install pkg
+    dnf:
+      name: "*"
+      state: present
