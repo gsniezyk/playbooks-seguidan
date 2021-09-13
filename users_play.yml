@@ -1,0 +1,15 @@
+---
+- hosts: fedora-lab
+  become: true
+  tasks:
+  ## add (present) or renove (absent) a user
+  - name: Usuario para Fedora lab
+    user:
+      name: "{{ usuario }}"
+      state: "{{ estado }}"
+      shell: /bin/bash
+      password: "{{ password }}"
+      comment: "Usuario"
+  - name: Check users
+    shell:
+      cmd: id "{{ usuario }}"
