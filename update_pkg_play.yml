@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  ## Install (present) or renove (absent) a packages
+  - name: Install pkg
+    dnf:
+      name: "{{ paquete }}"
+      state: "{{ estado }}"
