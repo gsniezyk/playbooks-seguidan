@@ -1,5 +1,5 @@
 ---
-- hosts: fedora-lab
+- hosts: all
   become: true
   tasks:
   ## add (present) or renove (absent) a user
