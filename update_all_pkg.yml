@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ equipo }}"
+- hosts: all
   become: true
   tasks:
   ## Install all packages
