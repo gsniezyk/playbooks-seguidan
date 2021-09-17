@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  ## Install all packages
+  - name: Upgrade all packages
+    dnf:
+      name: "*"
+      state: present
